@@ -13,7 +13,6 @@ for line in sys.stdin:
         a, b = int(i), int(j)
         mx = max(mx, a * 10 + b)
 
-
     mxs = [0] * 13
     
     for c in line:
@@ -21,7 +20,6 @@ for line in sys.stdin:
             d = int(c)
             mxs[l] = max(mxs[l], 10 * mxs[l - 1] + d)
     
-
     print(mxs[12])
     res += mx
     res2 += mxs[12]
